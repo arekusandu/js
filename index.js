@@ -24,3 +24,25 @@ for (let func of operations) {
 const thing = {
   doSomething: multiply,
 };
+
+//Functions as Arguments
+function callThreeTimes(f) {
+  f();
+  f();
+  f();
+}
+
+function printHello() {
+  console.log("Hello World!");
+}
+
+callThreeTimes(printHello);
+//Functions as Return Values
+function multiplyBy(num) {
+  return function (x) {
+    return x * num;
+  };
+}
+
+const double = multiplyBy(2);
+const triple = multiplyBy(3);
