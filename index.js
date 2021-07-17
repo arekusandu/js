@@ -1,48 +1,20 @@
-const add = function (a, b) {
-  return a + b;
-};
+//Array Callback Methods
 
-function subtract(a, b) {
-  return a - b;
+//forEach
+
+const numbers = [1, 2, 3, 4, 5];
+/*
+numbers.forEach(function (num) {
+  console.log(num);
+});
+
+function printTriple(n) {
+  console.log(n * 3);
 }
 
-const multiply = function (a, b) {
-  return a * b;
-};
+numbers.forEach(printTriple);
+*/
 
-function divide(a, b) {
-  return a / b;
-}
-
-const operations = [add, subtract, multiply, divide];
-
-for (let func of operations) {
-  let result = func(30, 5);
-  console.log(result);
-}
-
-const thing = {
-  doSomething: multiply,
-};
-
-//Functions as Arguments
-function callThreeTimes(f) {
-  f();
-  f();
-  f();
-}
-
-function printHello() {
-  console.log("Hello World!");
-}
-
-callThreeTimes(printHello);
-//Functions as Return Values
-function multiplyBy(num) {
-  return function (x) {
-    return x * num;
-  };
-}
-
-const double = multiplyBy(2);
-const triple = multiplyBy(3);
+numbers.forEach(function (num, idx) {
+  console.log(idx, num);
+});
