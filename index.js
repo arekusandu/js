@@ -16,9 +16,7 @@ numbers.forEach(printTriple);
 numbers.forEach(function (num, idx) {
   console.log(idx, num);
 });
-*/
 
-/*
 //Map
 const numbers = [1, 2, 3, 4, 5];
 const words = ["asap", "byob", "rsvp", "diy"];
@@ -69,9 +67,15 @@ const orwellBook = books.find((b) => b.authors.includes("Orwell"));
 const numbers = [1, 2, 3, 4, 5];
 const odds = numbers.filter((n) => n % 2 === 1);
 console.log(odds);
-*/
 
 const prices = [400.5, 3000, 99.99, 35.99, 12.0, 9500];
 const badSort = prices.slice().sort(); //string
 const ascSort = prices.slice().sort((a, b) => a - b);
 const descSort = prices.slice().sort((a, b) => b - a);
+*/
+
+const nums = [3, 4, 5, 6];
+const product = nums.reduce((total, currentVal) => {
+  return total * currentVal;
+});
+console.log(`Product: ${product}`);
