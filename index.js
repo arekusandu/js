@@ -79,3 +79,52 @@ const product = nums.reduce((total, currentVal) => {
   return total * currentVal;
 });
 console.log(`Product: ${product}`);
+
+const grades = [88, 99, 75, 100, 65];
+const maxGrade = grades.reduce((max, grade) => {
+  if (grade > max) return grade;
+  return max;
+});
+const minGrade = grades.reduce((min, grade) => Math.min(min, grade));
+console.log(`Max: ${maxGrade}, Min: ${minGrade}`);
+
+const votes = ["y", "n", "y"];
+const results = votes.reduce((tally, vote) => {
+  if (tally[vote]) {
+    tally[vote]++;
+  } else {
+    tally[vote] = 1;
+  }
+  return tally;
+}, {});
+
+const results2 = votes.reduce((tally, val) => {
+  tally[val] = (tally[val] || 0) + 1;
+  return tally;
+}, {});
+
+const books = [
+  {
+    title: "Cask of Amontillado",
+    authors: "Edgar Allan Poe",
+    rating: 9.34,
+  },
+  {
+    title: "Brave New World",
+    authors: "Aldous Huxley",
+    rating: 3,
+  },
+  {
+    title: "1984",
+    authors: "George Orwell",
+    rating: 6,
+  },
+];
+
+const groupedByRatings = books.reduce((group, book) => {
+  const key = Math.floor(book.rating);
+  if (!group[key]) group[key] = [];
+  group[key].push(book);
+  return group;
+}, {});
+console.log(groupedByRatings);
