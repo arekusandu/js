@@ -18,6 +18,7 @@ numbers.forEach(function (num, idx) {
 });
 */
 
+/*
 //Map
 const numbers = [1, 2, 3, 4, 5];
 const words = ["asap", "byob", "rsvp", "diy"];
@@ -40,24 +41,28 @@ const abbrevs = words.map(function (word) {
 });
 console.log(abbrevs);
 
+*/
 const books = [
   {
     title: "Cask of Amontillado",
     authors: "Edgar Allan Poe",
-    rating: 4.25,
+    rating: 9.34,
   },
   {
     title: "Brave New World",
     authors: "Aldous Huxley",
-    rating: 4.25,
+    rating: 3,
   },
   {
     title: "1984",
     authors: "George Orwell",
-    rating: 4.25,
+    rating: 6,
   },
 ];
 const titles = books.map(function (book) {
   return book.title;
 });
 console.log(titles);
+
+const goodBook = books.find((b) => b.rating >= 5);
+const orwellBook = books.find((b) => b.authors.includes("Orwell"));
