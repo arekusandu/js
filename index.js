@@ -41,7 +41,6 @@ const abbrevs = words.map(function (word) {
 });
 console.log(abbrevs);
 
-*/
 const books = [
   {
     title: "Cask of Amontillado",
@@ -66,3 +65,13 @@ console.log(titles);
 
 const goodBook = books.find((b) => b.rating >= 5);
 const orwellBook = books.find((b) => b.authors.includes("Orwell"));
+
+const numbers = [1, 2, 3, 4, 5];
+const odds = numbers.filter((n) => n % 2 === 1);
+console.log(odds);
+*/
+
+const prices = [400.5, 3000, 99.99, 35.99, 12.0, 9500];
+const badSort = prices.slice().sort(); //string
+const ascSort = prices.slice().sort((a, b) => a - b);
+const descSort = prices.slice().sort((a, b) => b - a);
